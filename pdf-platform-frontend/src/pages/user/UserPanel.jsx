@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState } from "react";
 import PDFCard from "./PDFCard";
-import "../assets/css/UserPanel.css";
+import "../../assets/css/UserPanel.css";
+import { userPdfService } from "../../services/UserPdfService";
 
 const UserPanel = () => {
   const [selectedDate, setSelectedDate] = useState("");
@@ -13,9 +13,9 @@ const UserPanel = () => {
     setSelectedDate(newDate);
     if (newDate) {
       try {
-        const response = await axios.get(`http://localhost:5000/pdf/byDate/${newDate}`);
-        setPdfs(response.data);
-        if (response.data.length === 0) {
+        const data = await userPdfService.getPdfsByDate(newDate);
+        setPdfs(data);
+        if (data.length === 0) {
           setMessage("No PDFs found for the selected date.");
         } else {
           setMessage("");

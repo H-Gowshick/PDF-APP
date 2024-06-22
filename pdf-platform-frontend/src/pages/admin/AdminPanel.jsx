@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect, useCallback } from "react";
 import PDFCards from "./PDFCards";
-import { pdfService } from "../services/pdfService";
-import "../assets/css/AdminPanel.css";
+import { AdminPdfService } from "../../services/AdminPdfService";
+import "../../assets/css/AdminPanel.css";
 
 const AdminPanel = () => {
   const [file, setFile] = useState(null);
@@ -13,7 +13,7 @@ const AdminPanel = () => {
 
   const fetchPDFs = useCallback(async () => {
     try {
-      const data = await pdfService.getAllPDFs();
+      const data = await AdminPdfService.getAllPDFs();
       setPdfs(data);
     } catch (error) {
       console.error("Error fetching PDFs:", error);
@@ -81,7 +81,7 @@ const AdminPanel = () => {
     try {
       setUploadProgress(0);
       const progressPromise = simulateProgress();
-      const uploadPromise = pdfService.uploadPDF(file, date);
+      const uploadPromise = AdminPdfService.uploadPDF(file, date);
       const [response] = await Promise.all([uploadPromise, progressPromise]);
       if (response.status === 201) {
         setUploadProgress(100);
@@ -158,6 +158,7 @@ const AdminPanel = () => {
               <div className="success-message">{message.text}</div>
             ))}
         </div>
+        <h2 className="title-two">Uploaded PDF Documents</h2>
         <PDFCards pdfs={pdfs} fetchPDFs={fetchPDFs} />
       </div>
     </>

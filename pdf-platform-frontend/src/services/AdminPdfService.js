@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const BASE_URL = 'http://localhost:5000';
 
-export const pdfService = {
+export const AdminPdfService = {
   getAllPDFs: async () => {
     try {
       const response = await axios.get(`${BASE_URL}/pdf/all`);

@@ -1,5 +1,5 @@
 const express = require("express");
-const PDF = require("../models/PDF-Model"); // Adjust the path as needed
+const PDF = require("../models/PDF-Model"); 
 const router = express.Router();
 
 

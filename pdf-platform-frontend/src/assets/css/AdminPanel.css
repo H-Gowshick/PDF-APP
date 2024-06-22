@@ -22,7 +22,13 @@
     font-weight: bold;
     margin-bottom: 10px;
   }
-  
+  .title-two{
+    font-size: 20px;
+    font-weight: bold;
+    font-family:'Trebuchet MS';
+    margin-bottom: 5px;
+    margin-top: 60px;
+  }
   .subtitle {
     font-size: 18px;
     color: #666;

@@ -18,6 +18,7 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 // Use the pdfRouter for routes starting with /pdf
 app.use("/pdf", adminRouter);
 app.use("/pdf", userRouter);
+
 // Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
