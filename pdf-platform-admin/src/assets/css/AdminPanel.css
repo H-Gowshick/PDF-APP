@@ -1,0 +1,144 @@
+.navbar {
+    background-color: #233;
+    color: white;
+    padding: 1rem;
+    text-align: left;
+  }
+  
+  .nav-title {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .upload-area {
+    background-color: #00bcd4;
+    border-radius: 10px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px dashed white;
+  }
+  
+  .upload-area:hover {
+    background-color: #02bce2;
+  }
+  
+  .file-icon {
+    width: 60px;
+    height: 60px;
+    background-image: url('../images/pdf-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+  }
+  
+  .choose-file-button {
+    background-color: white;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .choose-file-button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .drop-text {
+    color: white;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .selected-file {
+    color: Black;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .date-container {
+    margin-top: 30px;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+  
+  .date-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .date-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .alert-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .success-message {
+    color: green;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  .progress-fill {
+    height: 20px;
+    background-color: black;
+    border-radius: 5px;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .progress-text {
+    color: white;
+    font-size: 14px;
+    padding-left: 5px;
+  }
+  
+  .uploading-text {
+    color: Black;
+    font-size: 16px;
+    margin-bottom: -10px;
+    text-align: start;
+    font-weight: bold;
+  }
